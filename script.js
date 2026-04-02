@@ -60,7 +60,6 @@ function flashWelcome() {
 }
 
 typeBase();
-typeWelcome();
 
 // flashWelcome();
 

@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:monospace;
+  background: black;
+  color: #00ff9c;
+  overflow-x: hidden;
+}
+
+/* MATRIX BACKGROUND */
+.matrix {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.column {
+  position: absolute;
+  top: -100%;
+  font-family: monospace;
+  font-size: 14px;
+  color: #00ff9c;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateY(200%); opacity: 0.5; }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content:space-between;
+  padding: 20px 0px;
+  background: rgba(12, 12, 12, 0.927);
+  z-index: 1000;
+}
+
+nav a {
+  margin: 20px;
+  text-decoration: none;
+  color: #00ff9c;
+}
+
+/* STICKY SECTIONS */
+section {
+  border: rgba(27, 202, 0, 0.504) 5px double;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 30px 50px 50px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: rgba(50, 205, 50, 0.162) 0px 0px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+section:nth-child(odd) {
+  background: rgba(0,0,0,0.6);
+}
+
+section:nth-child(even) {
+  background: rgba(0, 20, 0, 0.805);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #00ff9c;
+  background: transparent;
+  color: #00ff9c;
+  cursor: pointer;
+  transition: all ease-in 0.1s;
+}
+
+.btn:hover {
+    scale: 1.01;
+    background-color: #00ff9d26;
+    transition: all ease-in 0.1s;
+    border: #00ff9d 1px solid;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 8px;
+  border: #00ff9d 1px solid;
+  transition: all ease-in 0.1s;
+}
+
+div .card:hover {
+    scale: 1.09;
+    background-color: #00ff9d26;
+    transition: all ease-in 0.1s;
+    border: #00ff9d 1px solid;
+}
+
+.terminal {
+  background: black;
+  padding: 20px;
+  font-family: monospace;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #00ff9c;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: black;
+  color: #00ff9c;
+  border: 1px solid #00ff9c;
+}

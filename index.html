@@ -5,7 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IT Engineer Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<script>
+(function() {
+    emailjs.init("l8ybVHurN0rLn7uu2"); // from EmailJS
+})();
 
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.send("service_ybt7dpn", "template_zjilzks", {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    })
+    .then(function(response) {
+        alert("Message sent successfully!");
+    }, function(error) {
+        alert("Failed to send message.");
+    });
+}
+</script>
 </head>
 
 <body>
@@ -84,28 +104,6 @@
 <script type="module" src="script.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function() {
-    emailjs.init("l8ybVHurN0rLn7uu2"); // from EmailJS
-})();
-
-function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs.send("service_ybt7dpn", "template_zjilzks", {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value
-    })
-    .then(function(response) {
-        alert("Message sent successfully!");
-    }, function(error) {
-        alert("Failed to send message.");
-    });
-}
-</script>
   
 </body>
 </html>

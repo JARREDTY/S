@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Engineer Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="matrix" id="matrix"></div>
+
+<header>
+  <h3>> IT Engineer</h3>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h1 id="typeText"></h1>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I solve real-world IT problems: networks, printers, and systems.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Networking</div>
+    <div class="card">System Admin</div>
+    <div class="card">Hardware</div>
+    <div class="card">Software</div>
+    <div class="card">Scripting</div>
+    <div class="card">Linux/MacOS/Windows</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">Networking</div>
+    <div class="card">Printers</div>
+    <div class="card">Servers</div>
+    <div class="card">POS Systems</div>
+    <div class="card">Legacy Systems</div>
+    <div class="card">Asset Management</div>
+    <div class="card">Automation</div>
+  </div>
+</section>
+
+<section>
+  <h2>Terminal</h2>
+  <div class="terminal" id="terminal"></div>
+  <input type="text" id="terminalInput" placeholder="type command...">
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form onsubmit="return false">
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
